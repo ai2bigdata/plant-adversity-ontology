@@ -1,0 +1,288 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/pao.owl#"
+     xml:base="http://purl.obolibrary.org/obo/pao.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:pao="http://purl.obolibrary.org/obo/PAO_">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/pao.owl">
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pao/releases/2025-11-22/pao.owl"/>
+        <dc:title>Plant Adversity Ontology (PAO)</dc:title>
+        <dc:description>A community-driven ontology for standardized annotation of biotic, abiotic, compound and regulator-induced adversities in plants</dc:description>
+        <dc:creator>Qing-Yong Yang</dc:creator>
+        <dc:contributor>Plant Adversity Ontology Consortium</dc:contributor>
+        <oboInOwl:date>22:11:2025</oboInOwl:date>
+        <oboInOwl:default-namespace>plant_adversity_ontology</oboInOwl:default-namespace>
+        <oboInOwl:hasOBOFormatVersion>1.4</oboInOwl:hasOBOFormatVersion>
+        <oboInOwl:auto-generated-by>ROBOT 1.9.0</oboInOwl:auto-generated-by>
+    </owl:Ontology>
+
+    <!-- ====================== ROOT ====================== -->
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_0000000">
+        <rdfs:label xml:lang="en">plant adversity</rdfs:label>
+        <oboInOwl:hasExactSynonym>plant stress</oboInOwl:hasExactSynonym>
+        <rdfs:comment>Any biotic or abiotic condition that adversely affects plant growth, development, reproduction or survival.</rdfs:comment>
+    </owl:Class>
+
+    <!-- ====================== THREE MAIN AXES ====================== -->
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_1000000">
+        <rdfs:label xml:lang="en">abiotic adversity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_0000000"/>
+        <oboInOwl:hasDbXref>GO:0009628</oboInOwl:hasDbXref>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_2000000">
+        <rdfs:label xml:lang="en">biotic adversity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_0000000"/>
+        <oboInOwl:hasDbXref>GO:0009607</oboInOwl:hasDbXref>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_3000000">
+        <rdfs:label xml:lang="en">exogenous regulator-induced response</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_0000000"/>
+        <rdfs:comment>Chemical or hormonal treatments used to mimic or alleviate stress responses.</rdfs:comment>
+    </owl:Class>
+
+    <!-- ====================== ABIOTIC (1000000+) ====================== -->
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_1100000">
+        <rdfs:label xml:lang="en">water deficit stress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_1000000"/>
+        <oboInOwl:hasExactSynonym>drought stress</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDbXref>DOI:10.1016/j.tplants.2020.08.006</oboInOwl:hasDbXref>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_1101001">
+        <rdfs:label xml:lang="en">mild water deficit stress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_1100000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_1101002">
+        <rdfs:label xml:lang="en">moderate water deficit stress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_1100000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_1101003">
+        <rdfs:label xml:lang="en">severe water deficit stress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_1100000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_1110000">
+        <rdfs:label xml:lang="en">flooding stress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_1000000"/>
+        <oboInOwl:hasExactSynonym>waterlogging stress</oboInOwl:hasExactSynonym>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_1110001">
+        <rdfs:label xml:lang="en">submergence stress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_1110000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_1200000">
+        <rdfs:label xml:lang="en">temperature stress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_1000000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_1201000">
+        <rdfs:label xml:lang="en">heat stress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_1200000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_1201001">
+        <rdfs:label xml:lang="en">high temperature stress (35-45°C)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_1201000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_1201002">
+        <rdfs:label xml:lang="en">extreme heat stress (>45°C)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_1201000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_1201003">
+        <rdfs:label xml:lang="en">high night temperature stress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_1201000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_1202000">
+        <rdfs:label xml:lang="en">cold stress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_1200000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_1202001">
+        <rdfs:label xml:lang="en">chilling stress (0-15°C)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_1202000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_1202002">
+        <rdfs:label xml:lang="en">freezing stress (<0°C)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_1202000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_1300000">
+        <rdfs:label xml:lang="en">salt stress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_1000000"/>
+        <oboInOwl:hasExactSynonym>salinity stress</oboInOwl:hasExactSynonym>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_1301001">
+        <rdfs:label xml:lang="en">NaCl stress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_1300000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_1400000">
+        <rdfs:label xml:lang="en">osmotic stress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_1000000"/>
+        <oboInOwl:hasExactSynonym>hyperosmotic stress</oboInOwl:hasExactSynonym>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_1401001">
+        <rdfs:label xml:lang="en">PEG-simulated osmotic stress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_1400000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_1500000">
+        <rdfs:label xml:lang="en">nutrient deficiency stress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_1000000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_1501001">
+        <rdfs:label xml:lang="en">nitrogen deficiency</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_1500000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_1600000">
+        <rdfs:label xml:lang="en">light stress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_1000000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_1601001">
+        <rdfs:label xml:lang="en">high light stress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_1600000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_1603001">
+        <rdfs:label xml:lang="en">UV-B radiation stress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_1600000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_1700000">
+        <rdfs:label xml:lang="en">oxidative stress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_1000000"/>
+    </owl:Class>
+
+    <!-- ====================== COMPOUND STRESSES (2020-2025 最热) ====================== -->
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_1900001">
+        <rdfs:label xml:lang="en">heat and drought combined stress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_1000000"/>
+        <oboInOwl:hasDbXref>DOI:10.1111/pce.14061</oboInOwl:hasDbXref>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_1900002">
+        <rdfs:label xml:lang="en">salt and drought combined stress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_1000000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_1900003">
+        <rdfs:label xml:lang="en">heat and salinity combined stress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_1000000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_1900004">
+        <rdfs:label xml:lang="en">ozone and chilling combined stress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_1000000"/>
+    </owl:Class>
+
+    <!-- ====================== BIOTIC (2000000+) ====================== -->
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_2100000">
+        <rdfs:label xml:lang="en">pathogen-induced stress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_2000000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_2101000">
+        <rdfs:label xml:lang="en">fungal disease stress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_2100000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_2101001">
+        <rdfs:label xml:lang="en">rust disease stress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_2101000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_2101002">
+        <rdfs:label xml:lang="en">powdery mildew stress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_2101000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_2200000">
+        <rdfs:label xml:lang="en">insect herbivory stress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_2000000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_2201001">
+        <rdfs:label xml:lang="en">chewing insect stress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_2200000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_2202001">
+        <rdfs:label xml:lang="en">aphid infestation stress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_2200000"/>
+    </owl:Class>
+
+    <!-- ====================== EXOGENOUS REGULATORS (3000000+) ====================== -->
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_3100000">
+        <rdfs:label xml:lang="en">plant hormone treatment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_3000000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_3101000">
+        <rdfs:label xml:lang="en">abscisic acid treatment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_3100000"/>
+        <oboInOwl:hasDbXref>CHEBI:2635</oboInOwl:hasDbXref>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_3102000">
+        <rdfs:label xml:lang="en">salicylic acid treatment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_3100000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_3103000">
+        <rdfs:label xml:lang="en">jasmonic acid treatment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_3100000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_3200000">
+        <rdfs:label xml:lang="en">elicitor treatment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_3000000"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PAO_3201001">
+        <rdfs:label xml:lang="en">chitosan treatment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PAO_3200000"/>
+    </owl:Class>
+
+    <!-- ====================== FACETS (Annotation Properties) ====================== -->
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/PAO_severity">
+        <rdfs:label>severity</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Allowed values: mild, moderate, severe, extreme</rdfs:comment>
+    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/PAO_duration">
+        <rdfs:label>duration</rdfs:label>
+        <rdfs:comment>Allowed values: acute, chronic, intermittent</rdfs:comment>
+    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/PAO_combination">
+        <rdfs:label>stress combination</rdfs:label>
+        <rdfs:comment>e.g., heat+drought, salt+drought</rdfs:comment>
+    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/PAO_experimental_setup">
+        <rdfs:label>experimental setup</rdfs:label>
+        <rdfs:comment>e.g., field, greenhouse, growth chamber, PEG-simulated</rdfs:comment>
+    </owl:AnnotationProperty>
+
+</rdf:RDF>
